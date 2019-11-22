@@ -3,12 +3,12 @@ package nickle.javaInjava.struct;
 /**
  * Created by button on 11/22/2019.
  */
-public class Method_Info {
+public class FieldInfo {
     short access_flags;
     short name_index;
     short descriptor_index;
     short attributes_count;
-    Attribute_Info attributes[];
+    AttributeInfo attributes[];
 
     public short getAccess_flags() {
         return access_flags;
@@ -42,11 +42,11 @@ public class Method_Info {
         this.attributes_count = attributes_count;
     }
 
-    public Attribute_Info[] getAttributes() {
+    public AttributeInfo[] getAttributes() {
         return attributes;
     }
 
-    public void setAttributes(Attribute_Info[] attributes) {
+    public void setAttributes(AttributeInfo[] attributes) {
         this.attributes = attributes;
     }
 }

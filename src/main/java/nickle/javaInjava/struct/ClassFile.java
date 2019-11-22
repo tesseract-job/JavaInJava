@@ -9,18 +9,18 @@ public class ClassFile {
     short minor_version;
     short major_version;
     short constant_pool_count;
-    CP_Info constant_pool[];
+    CPInfo constant_pool[];
     short access_flags;
     short this_class;
     short super_class;
     short interfaces_count;
     short interfaces[];
     short fields_count;
-    Field_Info fields[];
+    FieldInfo fields[];
     short methods_count;
-    Method_Info methods[];
+    MethodInfo methods[];
     short attributes_count;
-    Attribute_Info attributes[];
+    AttributeInfo attributes[];
 
     public int getMagic() {
         return magic;
@@ -54,11 +54,11 @@ public class ClassFile {
         this.constant_pool_count = constant_pool_count;
     }
 
-    public CP_Info[] getConstant_pool() {
+    public CPInfo[] getConstant_pool() {
         return constant_pool;
     }
 
-    public void setConstant_pool(CP_Info[] constant_pool) {
+    public void setConstant_pool(CPInfo[] constant_pool) {
         this.constant_pool = constant_pool;
     }
 
@@ -110,11 +110,11 @@ public class ClassFile {
         this.fields_count = fields_count;
     }
 
-    public Field_Info[] getFields() {
+    public FieldInfo[] getFields() {
         return fields;
     }
 
-    public void setFields(Field_Info[] fields) {
+    public void setFields(FieldInfo[] fields) {
         this.fields = fields;
     }
 
@@ -126,11 +126,11 @@ public class ClassFile {
         this.methods_count = methods_count;
     }
 
-    public Method_Info[] getMethods() {
+    public MethodInfo[] getMethods() {
         return methods;
     }
 
-    public void setMethods(Method_Info[] methods) {
+    public void setMethods(MethodInfo[] methods) {
         this.methods = methods;
     }
 
@@ -142,11 +142,11 @@ public class ClassFile {
         this.attributes_count = attributes_count;
     }
 
-    public Attribute_Info[] getAttributes() {
+    public AttributeInfo[] getAttributes() {
         return attributes;
     }
 
-    public void setAttributes(Attribute_Info[] attributes) {
+    public void setAttributes(AttributeInfo[] attributes) {
         this.attributes = attributes;
     }
 }
