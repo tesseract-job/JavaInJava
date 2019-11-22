@@ -6,20 +6,20 @@ package nickle.javaInjava.struct;
 public class ClassFile {
 
     int magic;
-    short minor_version;
-    short major_version;
-    short constant_pool_count;
-    CPInfo constant_pool[];
-    short access_flags;
-    short this_class;
-    short super_class;
-    short interfaces_count;
+    short minorVersion;
+    short majorVersion;
+    short constantPoolCount;
+    CPInfo constantPool[];
+    short accessFlags;
+    short thisClass;
+    short superClass;
+    short interfacesCount;
     short interfaces[];
-    short fields_count;
+    short fieldsCount;
     FieldInfo fields[];
-    short methods_count;
+    short methodsCount;
     MethodInfo methods[];
-    short attributes_count;
+    short attributesCount;
     AttributeInfo attributes[];
 
     public int getMagic() {
@@ -30,68 +30,68 @@ public class ClassFile {
         this.magic = magic;
     }
 
-    public short getMinor_version() {
-        return minor_version;
+    public short getMinorVersion() {
+        return minorVersion;
     }
 
-    public void setMinor_version(short minor_version) {
-        this.minor_version = minor_version;
+    public void setMinorVersion(short minorVersion) {
+        this.minorVersion = minorVersion;
     }
 
-    public short getMajor_version() {
-        return major_version;
+    public short getMajorVersion() {
+        return majorVersion;
     }
 
-    public void setMajor_version(short major_version) {
-        this.major_version = major_version;
+    public void setMajorVersion(short majorVersion) {
+        this.majorVersion = majorVersion;
     }
 
-    public short getConstant_pool_count() {
-        return constant_pool_count;
+    public short getConstantPoolCount() {
+        return constantPoolCount;
     }
 
-    public void setConstant_pool_count(short constant_pool_count) {
-        this.constant_pool_count = constant_pool_count;
+    public void setConstantPoolCount(short constantPoolCount) {
+        this.constantPoolCount = constantPoolCount;
     }
 
-    public CPInfo[] getConstant_pool() {
-        return constant_pool;
+    public CPInfo[] getConstantPool() {
+        return constantPool;
     }
 
-    public void setConstant_pool(CPInfo[] constant_pool) {
-        this.constant_pool = constant_pool;
+    public void setConstantPool(CPInfo[] constantPool) {
+        this.constantPool = constantPool;
     }
 
-    public short getAccess_flags() {
-        return access_flags;
+    public short getAccessFlags() {
+        return accessFlags;
     }
 
-    public void setAccess_flags(short access_flags) {
-        this.access_flags = access_flags;
+    public void setAccessFlags(short accessFlags) {
+        this.accessFlags = accessFlags;
     }
 
-    public short getThis_class() {
-        return this_class;
+    public short getThisClass() {
+        return thisClass;
     }
 
-    public void setThis_class(short this_class) {
-        this.this_class = this_class;
+    public void setThisClass(short thisClass) {
+        this.thisClass = thisClass;
     }
 
-    public short getSuper_class() {
-        return super_class;
+    public short getSuperClass() {
+        return superClass;
     }
 
-    public void setSuper_class(short super_class) {
-        this.super_class = super_class;
+    public void setSuperClass(short superClass) {
+        this.superClass = superClass;
     }
 
-    public short getInterfaces_count() {
-        return interfaces_count;
+    public short getInterfacesCount() {
+        return interfacesCount;
     }
 
-    public void setInterfaces_count(short interfaces_count) {
-        this.interfaces_count = interfaces_count;
+    public void setInterfacesCount(short interfacesCount) {
+        this.interfacesCount = interfacesCount;
     }
 
     public short[] getInterfaces() {
@@ -102,12 +102,12 @@ public class ClassFile {
         this.interfaces = interfaces;
     }
 
-    public short getFields_count() {
-        return fields_count;
+    public short getFieldsCount() {
+        return fieldsCount;
     }
 
-    public void setFields_count(short fields_count) {
-        this.fields_count = fields_count;
+    public void setFieldsCount(short fieldsCount) {
+        this.fieldsCount = fieldsCount;
     }
 
     public FieldInfo[] getFields() {
@@ -118,12 +118,12 @@ public class ClassFile {
         this.fields = fields;
     }
 
-    public short getMethods_count() {
-        return methods_count;
+    public short getMethodsCount() {
+        return methodsCount;
     }
 
-    public void setMethods_count(short methods_count) {
-        this.methods_count = methods_count;
+    public void setMethodsCount(short methodsCount) {
+        this.methodsCount = methodsCount;
     }
 
     public MethodInfo[] getMethods() {
@@ -134,12 +134,12 @@ public class ClassFile {
         this.methods = methods;
     }
 
-    public short getAttributes_count() {
-        return attributes_count;
+    public short getAttributesCount() {
+        return attributesCount;
     }
 
-    public void setAttributes_count(short attributes_count) {
-        this.attributes_count = attributes_count;
+    public void setAttributesCount(short attributesCount) {
+        this.attributesCount = attributesCount;
     }
 
     public AttributeInfo[] getAttributes() {

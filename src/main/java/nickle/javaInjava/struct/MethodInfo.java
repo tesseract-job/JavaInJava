@@ -4,42 +4,42 @@ package nickle.javaInjava.struct;
  * Created by button on 11/22/2019.
  */
 public class MethodInfo {
-    short access_flags;
-    short name_index;
-    short descriptor_index;
-    short attributes_count;
+    short accessFlags;
+    short nameIndex;
+    short descriptorIndex;
+    short attributesCount;
     AttributeInfo attributes[];
 
-    public short getAccess_flags() {
-        return access_flags;
+    public short getAccessFlags() {
+        return accessFlags;
     }
 
-    public void setAccess_flags(short access_flags) {
-        this.access_flags = access_flags;
+    public void setAccessFlags(short accessFlags) {
+        this.accessFlags = accessFlags;
     }
 
-    public short getName_index() {
-        return name_index;
+    public short getNameIndex() {
+        return nameIndex;
     }
 
-    public void setName_index(short name_index) {
-        this.name_index = name_index;
+    public void setNameIndex(short nameIndex) {
+        this.nameIndex = nameIndex;
     }
 
-    public short getDescriptor_index() {
-        return descriptor_index;
+    public short getDescriptorIndex() {
+        return descriptorIndex;
     }
 
-    public void setDescriptor_index(short descriptor_index) {
-        this.descriptor_index = descriptor_index;
+    public void setDescriptorIndex(short descriptorIndex) {
+        this.descriptorIndex = descriptorIndex;
     }
 
-    public short getAttributes_count() {
-        return attributes_count;
+    public short getAttributesCount() {
+        return attributesCount;
     }
 
-    public void setAttributes_count(short attributes_count) {
-        this.attributes_count = attributes_count;
+    public void setAttributesCount(short attributesCount) {
+        this.attributesCount = attributesCount;
     }
 
     public AttributeInfo[] getAttributes() {
