@@ -8,20 +8,20 @@ import lombok.Data;
 @Data
 public class ClassFile {
 
-    int magic;
-    short minorVersion;
-    short majorVersion;
-    short constantPoolCount;
-    CPInfo constantPool[];
-    short accessFlags;
-    short thisClass;
-    short superClass;
-    short interfacesCount;
-    short interfaces[];
-    short fieldsCount;
-    FieldInfo fields[];
-    short methodsCount;
-    MethodInfo methods[];
-    short attributesCount;
-    AttributeInfo attributes[];
+    private int magic;
+    private short minorVersion;
+    private short majorVersion;
+    private short constantPoolCount;
+    private CPInfo constantPool[];
+    private short accessFlags;
+    private short thisClass;
+    private short superClass;
+    private short interfacesCount;
+    private short interfaces[];
+    private short fieldsCount;
+    private FieldInfo fields[];
+    private short methodsCount;
+    private MethodInfo methods[];
+    private short attributesCount;
+    private AttributeInfo attributes[];
 }

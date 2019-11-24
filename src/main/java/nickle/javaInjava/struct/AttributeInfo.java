@@ -7,7 +7,7 @@ import lombok.Data;
  */
 @Data
 public class AttributeInfo {
-    short attributeNameIndex;
-    int attributeLength;
-    byte info[];
+    private short attributeNameIndex;
+    private int attributeLength;
+    private byte info[];
 }
