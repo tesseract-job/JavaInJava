@@ -7,9 +7,9 @@ import lombok.Data;
  */
 @Data
 public class FieldInfo {
-    short accessFlags;
-    short nameIndex;
-    short descriptorIndex;
-    short attributesCount;
-    AttributeInfo attributes[];
+    private short accessFlags;
+    private short nameIndex;
+    private short descriptorIndex;
+    private short attributesCount;
+    private AttributeInfo attributes[];
 }

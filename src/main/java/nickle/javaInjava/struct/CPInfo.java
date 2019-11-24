@@ -7,6 +7,6 @@ import lombok.Data;
  */
 @Data
 public class CPInfo {
-    byte tag;
-    byte info[];
+    private byte tag;
+    private byte info[];
 }
