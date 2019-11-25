@@ -3,10 +3,11 @@ package nickle.javaInjava.struct;
 import lombok.Data;
 
 /**
- * Created by button on 11/22/2019.
+ * @author button
+ * @date 11/22/2019
  */
 @Data
-public class CPInfo {
+public class CPInfo<T> {
     private byte tag;
-    private byte info[];
+    private T info;
 }
