@@ -1,5 +1,6 @@
 package nickle.javaInjava.struct;
 
+import lombok.Builder;
 import lombok.Data;
 
 /**
