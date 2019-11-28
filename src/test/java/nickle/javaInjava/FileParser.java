@@ -1,3 +1,4 @@
+/*
 package nickle.javaInjava;
 
 import nickle.javaInjava.struct.*;
@@ -7,17 +8,16 @@ import java.io.DataInputStream;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.LinkedHashMap;
-import java.util.Map;
 
+*/
 /**
  * @program: LXSpringBoot
  * @description: 文件解析
  * @author: lixiao
  * @create: 2019-11-24 14:48
- **/
+ **//*
+
 public class FileParser {
     
     
@@ -26,6 +26,8 @@ public class FileParser {
         String fileName = "E:\\work\\workspace\\JavaInJava\\target\\test-classes\\nickle\\javaInjava\\TestClass.class";
         FileInputStream inputStream = getInputStream(fileName);
         DataInputStream dataInputStream = new DataInputStream(inputStream);
+*/
+/*
         ClassFile classFile = ClassFile.builder().build();
         parseMagic(dataInputStream,classFile);
         parseMinorVersion(dataInputStream,classFile);
@@ -41,9 +43,14 @@ public class FileParser {
         parseFields(dataInputStream,classFile);
         parseMethodsCount(dataInputStream,classFile);
         parseMethods(dataInputStream,classFile);
-        /* parseAttributesCount(dataInputStream,classFile);
-        parseAttributes(dataInputStream,classFile);*/
-        System.out.println(classFile);
+        *//*
+*/
+/* parseAttributesCount(dataInputStream,classFile);
+        parseAttributes(dataInputStream,classFile);*//*
+*/
+/*
+        System.out.println(classFile);*//*
+
     }
     private static void getConstantPool(DataInputStream dataInputStream, ClassFile classFile) throws IOException {
         short constantPoolCount = classFile.getConstantPoolCount();
@@ -84,7 +91,8 @@ public class FileParser {
         System.out.println("attributeLength:"+dataInputStream.readLong());
         System.out.println("maxStack:"+dataInputStream.readShort());
         System.out.println("maxLocals:"+dataInputStream.readShort());
-        /*StringBuilder sb =new StringBuilder("methodInfo[accesssFlags:"+dataInputStream.readShort()+
+        */
+/*StringBuilder sb =new StringBuilder("methodInfo[accesssFlags:"+dataInputStream.readShort()+
                 ",nameIndex:"+dataInputStream.readShort()+
                 ",descriptorIndex:"+dataInputStream.readShort()+
                 ",attributesCount:");
@@ -116,7 +124,8 @@ public class FileParser {
             sb.append("\n");
         }
         sb.append("]");
-        System.out.println(sb.toString());*/
+        System.out.println(sb.toString());*//*
+
     }
     private static FileInputStream getInputStream(String fileName){
         try {
@@ -329,3 +338,4 @@ public class FileParser {
     }
 
 }
+*/
