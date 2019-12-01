@@ -16,8 +16,5 @@ public class ConstantLongInfo extends CPInfo{
     private int highBytes;
     private int lowBytes;
 
-    @Override
-    public void read(CPInfo cpInfo, ClassFileReader classFileReader, int currentEventIndex) {
 
-    }
 }

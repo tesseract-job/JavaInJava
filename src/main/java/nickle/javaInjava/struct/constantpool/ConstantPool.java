@@ -3,6 +3,7 @@ package nickle.javaInjava.struct.constantpool;
 import nickle.javaInjava.parser.ClassFileEvent;
 import nickle.javaInjava.parser.ClassFileReader;
 import nickle.javaInjava.parser.ConstantFactory;
+import nickle.javaInjava.parser.Event;
 import nickle.javaInjava.struct.ClassFile;
 
 /**
@@ -15,22 +16,22 @@ public class ConstantPool extends ClassFileEvent {
     private CPInfo[] constants;
 
     @Override
-    public void read(ClassFile classFile, ClassFileReader classFileReader,int currentEventIndex) {
+    public void read(Object object, ClassFileReader classFileReader) {
+        ClassFile classFile = (ClassFile) object;
         short constantPoolCount = classFile.getConstantPoolCount();
-        if(constantPoolCount == 0){
-            return;
-        }
-        constants = new CPInfo[constantPoolCount];
+        constants = new CPInfo[classFile.getConstantPoolCount()];
         for (short i = 1; i < constantPoolCount; i++) {
-            constants[i] = getCPInfo(classFileReader,i);
+            constants[i] = readCPInfo(classFile,classFileReader);
         }
         classFile.setConstantPool(constants);
     }
-    private CPInfo getCPInfo(ClassFileReader classFileReader,int currentEventIndex){
-        byte tag = classFileReader.readByte();
+    private CPInfo readCPInfo(Object object, ClassFileReader classFileReader){
+
+        Byte tag = READ_U1.apply(classFileReader);
         CPInfo cpInfo = ConstantFactory.create(tag);
-        cpInfo.read(cpInfo,classFileReader,currentEventIndex);
+        cpInfo.setTag(tag);
+        cpInfo.setTypeDes(cpInfo.getName());
+        cpInfo.read(cpInfo,classFileReader);
         return cpInfo;
     }
-
 }

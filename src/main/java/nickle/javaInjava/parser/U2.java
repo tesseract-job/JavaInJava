@@ -12,9 +12,9 @@ import java.util.function.Function;
  **/
 public class U2 extends UInt<Short> {
 
-    public U2(String filedName) {
+    public U2() {
         super(READ_U2);
-        setName(filedName);
+
     }
 
 }

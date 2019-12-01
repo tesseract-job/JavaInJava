@@ -1,9 +1,8 @@
 package nickle.javaInjava.struct.constantpool;
 
-import lombok.Builder;
 import lombok.Data;
-import nickle.javaInjava.parser.ClassFileReader;
-import nickle.javaInjava.struct.constantpool.tag.ConstantTag;
+
+import java.io.UnsupportedEncodingException;
 
 /**
  * Created by wesley on 2019/11/24.
@@ -12,16 +11,20 @@ import nickle.javaInjava.struct.constantpool.tag.ConstantTag;
 public class ConstantUtf8Info extends CPInfo{
 
     {
-        tag(ConstantTag.UTF8.tag());
+       u2("length");
+       array("bytes","length");
     }
-
+    private byte tag;
     private short length;
     private byte[] bytes;
     private String desc;
 
-
-    @Override
-    public void read(CPInfo cpInfo, ClassFileReader classFileReader, int currentEventIndex) {
-
-    }
+/*    public String getDesc() {
+        try {
+            return new String(this.bytes,"utf8");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }*/
 }

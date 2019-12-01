@@ -16,8 +16,5 @@ public class ConstantFloatInfo extends CPInfo{
 
     private float bytes;
 
-    @Override
-    public void read(CPInfo cpInfo, ClassFileReader classFileReader, int currentEventIndex) {
 
-    }
 }

@@ -3,6 +3,7 @@ package nickle.javaInjava.struct.constantpool;
 import lombok.Data;
 import nickle.javaInjava.parser.ClassFileEvent;
 import nickle.javaInjava.parser.ClassFileReader;
+import nickle.javaInjava.parser.Event;
 
 /**
  * @author button
@@ -11,12 +12,14 @@ import nickle.javaInjava.parser.ClassFileReader;
 @Data
 public abstract class CPInfo extends ClassFileEvent {
 
+
     private byte tag;
     private String typeDes;
 
-    public abstract void read(CPInfo cpInfo, ClassFileReader classFileReader,int currentEventIndex);
 
     public void tag(byte tag){
         this.tag = tag;
     }
+
+   /* protected abstract CPInfo fillConstantInfo(CPInfo cpInfo);*/
 }

@@ -17,8 +17,5 @@ public class ConstantMethodHandleInfo extends CPInfo{
     private byte referencekind;
     private short referenceIndex;
 
-    @Override
-    public void read(CPInfo cpInfo, ClassFileReader classFileReader, int currentEventIndex) {
 
-    }
 }

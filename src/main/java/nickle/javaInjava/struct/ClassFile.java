@@ -1,18 +1,15 @@
 package nickle.javaInjava.struct;
 
-import com.sun.org.apache.bcel.internal.util.ClassPath;
-import lombok.Builder;
 import lombok.Data;
 import nickle.javaInjava.parser.ClassFileEvent;
 import nickle.javaInjava.parser.ClassFileParser;
-import nickle.javaInjava.parser.Event;
 import nickle.javaInjava.struct.constantpool.CPInfo;
 import nickle.javaInjava.struct.constantpool.ConstantPool;
 
 import java.io.DataInputStream;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.util.Map;
+import java.io.IOException;
+import java.util.Arrays;
 
 /**
  * Created by button on 11/22/2019.
@@ -24,7 +21,18 @@ public class ClassFile extends ClassFileEvent {
         u2("minorVersion");
         u2("majorVersion");
         u2("constantPoolCount");
-        add("constantPoolCount",new ConstantPool());
+        add("constantPool",new ConstantPool());
+        u2("accessFlags");
+        u2("thisClass");
+        u2("superClass");
+        u2("interfacesCount");
+        tableU2("interfaces");
+        u2("fieldsCount");
+        table("fields",FieldInfo.class);
+        u2("methodsCount");
+        table("methods",MethodInfo.class);
+        u2("attributesCount");
+        table("attributes",AttributeInfo.class);
     }
     private int magic;
     private short minorVersion;
@@ -35,7 +43,7 @@ public class ClassFile extends ClassFileEvent {
     private short thisClass;
     private short superClass;
     private short interfacesCount;
-    private short[] interfaces;
+    private Short[] interfaces;
     private short fieldsCount;
     private FieldInfo[] fields;
     private short methodsCount;
@@ -43,12 +51,16 @@ public class ClassFile extends ClassFileEvent {
     private short attributesCount;
     private AttributeInfo[] attributes;
 
-    public static void main(String[] args) throws FileNotFoundException {
-        String fileName = "E:\\work\\workspace\\JavaInJava\\target\\test-classes\\nickle\\javaInjava\\TestClass.class";
+    public static void main(String[] args) throws IOException {
+        String fileName = "D:\\study\\JavaInJava\\target\\test-classes\\nickle\\javaInjava\\TestClass.class";
         FileInputStream inputStream = new FileInputStream(fileName);
         DataInputStream dataInputStream = new DataInputStream(inputStream);
         ClassFileParser classFileParser = new ClassFileParser();
         ClassFile classFile = classFileParser.parse(dataInputStream);
-        System.out.println(classFile);
+        System.out.println(Arrays.asList(classFile.getConstantPool()));
+        System.out.println(classFile.toString());
+        short i = dataInputStream.readShort();
+        System.out.println(i);
+
     }
 }

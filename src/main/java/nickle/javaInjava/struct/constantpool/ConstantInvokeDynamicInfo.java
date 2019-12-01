@@ -11,13 +11,11 @@ import nickle.javaInjava.struct.constantpool.tag.ConstantTag;
 public class ConstantInvokeDynamicInfo extends CPInfo{
 
     {
-        tag(ConstantTag.INVOKE_DYNAMIC.tag());
+        u2("bootstrapMethodAttrIndex");
+        u2("nameAndTypeIndex");
     }
     private short bootstrapMethodAttrIndex;
     private short nameAndTypeIndex;
 
-    @Override
-    public void read(CPInfo cpInfo, ClassFileReader classFileReader, int currentEventIndex) {
 
-    }
 }

@@ -13,14 +13,12 @@ import nickle.javaInjava.struct.constantpool.tag.ConstantTag;
 public class ConstantFieldRefInfo extends CPInfo{
 
     {
-        tag(ConstantTag.FIELD_REF.tag());
+        u2("classIndex");
+        u2("nameAndTypeIndex");
     }
 
     private short classIndex;
     private short nameAndTypeIndex;
 
-    @Override
-    public void read(CPInfo cpInfo, ClassFileReader classFileReader, int currentEventIndex) {
 
-    }
 }

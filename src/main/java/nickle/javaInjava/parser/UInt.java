@@ -1,10 +1,6 @@
 package nickle.javaInjava.parser;
 
-import nickle.javaInjava.struct.ClassFile;
-
 import java.lang.reflect.Field;
-import java.util.List;
-import java.util.function.BiFunction;
 import java.util.function.Function;
 
 /**
@@ -23,14 +19,12 @@ public class UInt<T> extends ClassFileEvent{
     }
 
     @Override
-    public void read(ClassFile classFile, ClassFileReader classFileReader,int currentEventIndex) {
+    public void read(Object obj, ClassFileReader classFileReader){
         try {
-            List<Event> events = getEvents();
-            Event event = events.get(currentEventIndex);
-            Field field = classType.getDeclaredField(event.getName());
+            Field field = obj.getClass().getDeclaredField(getName());
             field.setAccessible(true);
             T apply = intReader.apply(classFileReader);
-            field.set(classFile,apply);
+            field.set(obj,apply);
         } catch (ReflectiveOperationException e) {
             e.printStackTrace();
         }

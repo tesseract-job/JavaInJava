@@ -14,7 +14,7 @@ public class ClassFileParser implements Parser<DataInputStream, ClassFile> {
     @Override
     public ClassFile parse(DataInputStream dataInputStream) {
         ClassFile classFile = new ClassFile();
-        classFile.read(classFile,new ClassFileReader(dataInputStream),-1);
+        classFile.read(classFile,new ClassFileReader(dataInputStream));
         return classFile;
     }
 }

@@ -33,7 +33,7 @@ public class ConstantFactory {
             case 18: return new ConstantInvokeDynamicInfo();
         }
 
-        throw new RuntimeException("Invalid Constant Type: " + tag);
+        return null;
     }
 
 }

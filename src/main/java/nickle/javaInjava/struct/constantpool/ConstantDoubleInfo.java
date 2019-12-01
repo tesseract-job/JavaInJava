@@ -13,12 +13,8 @@ public class ConstantDoubleInfo extends CPInfo{
     {
         tag(ConstantTag.DOUBLE.tag());
     }
-
+    private byte tag;
     private float highBytes;
     private float lowBytes;
 
-    @Override
-    public void read(CPInfo cpInfo, ClassFileReader classFileReader, int currentEventIndex) {
-
-    }
 }

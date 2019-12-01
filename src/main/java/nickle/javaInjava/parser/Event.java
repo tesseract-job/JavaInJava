@@ -18,18 +18,14 @@ public class Event {
 
     private List<Event> events;
 
-    protected final void addEvent(Event event){
-
+    protected final void add(String eventName, Event event){
+        event.setName(eventName);
         if(events == null){
             events = new ArrayList<>();
         }
         events.add(event);
     }
 
-    protected void add(String eventName, Event event){
-        event.setName(eventName);
-        this.addEvent(event);
-    }
     public List<Event> getEvents() {
         return events;
     }

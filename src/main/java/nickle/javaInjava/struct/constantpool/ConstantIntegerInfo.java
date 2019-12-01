@@ -16,8 +16,5 @@ public class ConstantIntegerInfo extends CPInfo{
 
     private int bytes;
 
-    @Override
-    public void read(CPInfo cpInfo, ClassFileReader classFileReader, int currentEventIndex) {
 
-    }
 }

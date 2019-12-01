@@ -17,5 +17,5 @@ public interface Reader {
     long readIntUnsigned() throws IOException;
     long readLong() throws IOException;
     String readLongUnsigned() throws IOException;
-
+    byte[] readBytes(int length) throws IOException;
 }

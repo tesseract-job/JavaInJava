@@ -16,8 +16,5 @@ public class ConstantMethodTypeInfo extends CPInfo{
 
     private byte descriptorIndex;
 
-    @Override
-    public void read(CPInfo cpInfo, ClassFileReader classFileReader, int currentEventIndex) {
 
-    }
 }
