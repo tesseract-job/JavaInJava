@@ -1,5 +1,6 @@
 package nickle.javaInjava.struct;
 
+import lombok.Builder;
 import lombok.Data;
 
 import java.util.LinkedHashMap;
@@ -9,13 +10,14 @@ import java.util.Map;
  * Created by button on 11/22/2019.
  */
 @Data
+@Builder
 public class ClassFile {
 
     private int magic;
     private short minorVersion;
     private short majorVersion;
     private short constantPoolCount;
-    private Map<String, CPInfo> constantPool = new LinkedHashMap<String, CPInfo>();
+    private Map<Integer, CPInfo> constantPool;
     private short accessFlags;
     private short thisClass;
     private short superClass;
